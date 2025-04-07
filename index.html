@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PlanMaster Pro</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="light-theme">
+  <header class="topbar">
+    <h1 class="logo">PlanMaster Pro</h1>
+    <nav class="nav-buttons">
+      <button class="nav-btn" onclick="showSection('dashboard')">Dashboard</button>
+      <button class="nav-btn" onclick="showSection('taskManager')">Task Manager</button>
+      <button class="nav-btn" onclick="showSection('calendar')">Calendar</button>
+      <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section id="dashboard" class="content-section">
+      <h2>Welcome to your Dashboard 📊</h2>
+      <p>Track your progress and stay productive!</p>
+    </section>
+
+    <section id="taskManager" class="content-section hidden">
+      <h2>Task Manager 📝</h2>
+      <div class="task-form">
+        <input type="text" id="subject" placeholder="Subject" />
+        <input type="text" id="topic" placeholder="Topic" />
+        <input type="date" id="date" />
+        <input type="number" id="duration" placeholder="Duration (mins)" />
+        <button onclick="addTask()">Add Task</button>
+      </div>
+      <ul id="task-list"></ul>
+    </section>
+
+    <section id="calendar" class="content-section hidden">
+      <h2>Planner View 📅</h2>
+      <p>You can customize your routine here soon! 🚀</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 PlanMaster Pro. Designed with ❤️ by Anjali Koshti | Stay Focused, Stay Sharp 💡</p>
+  </footer>
+
+  <audio id="alarm-sound" src="notification.mp3.wav" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
